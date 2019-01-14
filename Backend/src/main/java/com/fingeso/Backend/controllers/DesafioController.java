@@ -1,7 +1,7 @@
  package com.fingeso.Backend.controllers;
 
-import com.fingeso.Backend.model.Desafio;
-import com.fingeso.Backend.repository.DesafioRepository;
+import com.fingeso.Backend.models.Desafio;
+import com.fingeso.Backend.repositories.DesafioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.apache.logging.log4j.util.PropertySource;
@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Date;
 
-@CrossOrigin(origins = "http://localhost:4200",maxAge = 3600)
+@CrossOrigin(origins = " ",maxAge = 3600)
 @RestController
 @RequestMapping(value = "/desafios")
 public class DesafioController {

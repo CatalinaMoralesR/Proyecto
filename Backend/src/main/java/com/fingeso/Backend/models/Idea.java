@@ -1,4 +1,4 @@
-package com.fingeso.Backend.model;
+package com.fingeso.Backend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;

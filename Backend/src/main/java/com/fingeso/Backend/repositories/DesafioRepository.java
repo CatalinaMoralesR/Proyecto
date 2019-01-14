@@ -1,5 +1,5 @@
-package com.fingeso.Backend.repository;
-import com.fingeso.Backend.model.Desafio;
+package com.fingeso.Backend.repositories;
+import com.fingeso.Backend.models.Desafio;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Date;

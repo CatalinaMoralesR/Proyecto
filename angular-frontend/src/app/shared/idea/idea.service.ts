@@ -9,6 +9,6 @@ export class IdeaService {
   }
 
   getAll(): Observable<any> {
-    return this.http.get('localhost:1313/ideas/getideas');
+    return this.http.get('//localhost:1313/ideas/getideas');
   }
 }

@@ -1,7 +1,7 @@
  package com.fingeso.Backend.controllers;
 
-import com.fingeso.Backend.model.Idea;
-import com.fingeso.Backend.repository.IdeaRepository;
+import com.fingeso.Backend.models.Idea;
+import com.fingeso.Backend.repositories.IdeaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.apache.logging.log4j.util.PropertySource;
