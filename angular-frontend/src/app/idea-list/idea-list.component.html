@@ -1,9 +1,11 @@
 <mat-card>
-  <mat-card-title>Idea List</mat-card-title>
+  <mat-card-title align="center">Ideas</mat-card-title>
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let idea of ideas">
         <h3 mat-line>{{idea.nombre}}</h3>
+        <br> <h3 mat-line>{{idea.descripcion}}</h3>
+
       </mat-list-item>
     </mat-list>
   </mat-card-content>

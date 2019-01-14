@@ -14,7 +14,7 @@ const routes: Routes = [
     component: IdeaEditComponent
   },
   {
-    path: 'idea-edit/:id',
+    path: 'idea-edit/:idNumber',
     component: IdeaEditComponent
   }
 ];

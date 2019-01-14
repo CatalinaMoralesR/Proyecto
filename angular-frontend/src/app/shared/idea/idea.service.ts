@@ -24,7 +24,7 @@ export class IdeaService {
     if (idea['href']) {
       result = this.http.put(idea.href, idea);
     } else {
-      result = this.http.post(this.IDEA_API, idea);
+      result = this.http.post(this.IDEA_API + '/create', idea);
     }
     return result;
   }

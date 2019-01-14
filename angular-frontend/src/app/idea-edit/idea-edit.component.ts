@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { IdeaService } from '../shared/idea/idea.service';
 @Component({
+  //nombre de la página
   selector: 'app-idea-edit',
   templateUrl: './idea-edit.component.html',
   styleUrls: ['./idea-edit.component.css']
@@ -19,6 +20,7 @@ export class IdeaEditComponent implements OnInit {
     ) {
 }
 
+//Cuando se inicia el componente, busca el id para ver si el componente existe
 ngOnInit() {
   this.sub = this.route.params.subscribe(params => {
     const id = params['id'];
