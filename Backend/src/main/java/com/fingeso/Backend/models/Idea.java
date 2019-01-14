@@ -6,18 +6,19 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.util.List;
 
+
 public class Idea {
-    @Id private String idNumber;
+    @Id private String id;
     public String descripcion;
     public String nombre;
 
 
-    public String getIdNumber() {
-        return idNumber;
+    public String getId() {
+        return id;
     }
 
-    public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getDescripcion() {

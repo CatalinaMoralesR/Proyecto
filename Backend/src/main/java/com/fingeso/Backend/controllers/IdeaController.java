@@ -24,7 +24,7 @@ public class IdeaController {
     @ResponseBody
     public Idea getIdeaList(@PathVariable String id){
 
-        return this.repository.findIdeaByIdNumber(id);
+        return this.repository.findIdeaById(id);
     }
 
     //ruta: http://localhost:1313/ideas/getideas
@@ -48,7 +48,7 @@ public class IdeaController {
       @RequestMapping(value ="/delete/{id}", method = RequestMethod.DELETE)
       @ResponseBody
       public void deleteIdea(@PathVariable String id) {
-      repository.delete(repository.findIdeaByIdNumber(id));
+      repository.delete(repository.findIdeaById(id));
   }
     //Ruta:  http://localhost:1313/ideas/create
 

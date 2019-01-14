@@ -5,9 +5,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Repository
-@CrossOrigin(origins = " ",maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200 ",maxAge = 3600)
 public interface IdeaRepository extends MongoRepository<Idea, String>{
 
-    Idea findIdeaByIdNumber(String idNumber);
+    Idea findIdeaById(String id);
     Idea findIdeaByNombre(String nombre);
 }
