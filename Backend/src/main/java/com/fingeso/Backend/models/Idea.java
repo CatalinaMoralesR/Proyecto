@@ -25,7 +25,7 @@ public class Idea {
         return descripcion;
     }
 
-    public void setDescripcion(String description) {
+    public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
