@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Desafio {
 
-    @Id private String idNumber;
+    @Id private String id;
     public String nombre;
     public String descripcion;
     private Date fecha_de_inicio;
@@ -16,18 +16,18 @@ public class Desafio {
 
 
     public String getIdNumber() {
-        return idNumber;
+        return id;
     }
 
-    public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
+    public void setIdNumber(String id) {
+        this.id = id;
     }
 
     public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String description) {
+    public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
