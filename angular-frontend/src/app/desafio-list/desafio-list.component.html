@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-title align="center">Desafíos</mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let desafio of desafios">
+          <h3 mat-line>{{desafio.nombre}}</h3>
+          <br> <h3 mat-line>{{desafio.descripcion}}</h3>
+  
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  
+    <button mat-fab color="primary" [routerLink]="['/desafio-add']">Add</button>
+  </mat-card>
+  
+  

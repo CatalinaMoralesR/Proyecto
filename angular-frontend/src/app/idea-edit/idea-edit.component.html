@@ -1,7 +1,7 @@
 <mat-card>
   <form #ideaForm="ngForm" (ngSubmit)="save(ideaForm.value)">
     <mat-card-header>
-      <mat-card-title><h2>{{idea.nombre ? 'Edit' : 'Agregar'}} Idea</h2></mat-card-title>
+      <mat-card-title><h2>Publica tu Idea</h2></mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <input type="hidden" name="href" [(ngModel)]="idea.href">
