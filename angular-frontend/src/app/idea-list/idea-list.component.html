@@ -1,15 +1,17 @@
-<mat-card>
-  <mat-card-title align="center">Ideas</mat-card-title>
-  <mat-card-content>
-    <mat-list>
-      <mat-list-item *ngFor="let idea of ideas">
-        <h3 mat-line>{{idea.nombre}}</h3>
-        <br> <h3 mat-line>{{idea.descripcion}}</h3>
-        <button mat-fab color="primary" [routerLink]="['/idea-show',idea.id]">Ver idea</button>
+<div class="row" >
+<div class ="container" *ngFor="let idea of ideas.reverse()">
 
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
-
-  <button mat-fab color="primary" [routerLink]="['/idea-add']">Añadir</button>
-</mat-card>
+  <div class="title">
+    <a [routerLink]="['/idea-show',idea.id]">
+      {{idea.nombre}}
+    </a>
+  </div>
+  <br>
+  <div class="descripcion">
+    {{idea.descripcion}}
+  </div>
+  <div class="permalink">
+    <a style="color:white;" [routerLink]="['/idea-show',idea.id]">ver idea</a>
+  </div>
+</div>
+</div>
