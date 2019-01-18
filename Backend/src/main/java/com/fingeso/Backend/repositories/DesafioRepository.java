@@ -6,7 +6,7 @@ import java.util.Date;
 @Repository
 public interface DesafioRepository extends MongoRepository<Desafio, String>{
 
-    Desafio findDesafioByIdNumber(String idNumber);
+    Desafio findDesafioById(String id);
     Desafio findDesafioByNombre(String nombre);
    // Desafio findDesafioByFechaInicio(Date fecha_de_inicio);
    // Desafio findDesafioByFechaFin(Date fecha_de_fin);

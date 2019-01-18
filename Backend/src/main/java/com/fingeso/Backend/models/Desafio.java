@@ -15,11 +15,11 @@ public class Desafio {
     private Date fecha_de_fin; 
 
 
-    public String getIdNumber() {
+    public String getId() {
         return id;
     }
 
-    public void setIdNumber(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 

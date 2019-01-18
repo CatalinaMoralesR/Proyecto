@@ -14,6 +14,8 @@ import { IdeaEditComponent } from './idea-edit/idea-edit.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DesafioListComponent } from './desafio-list/desafio-list.component';
 import { DesafioEditComponent } from './desafio-edit/desafio-edit.component';
+import { IdeaShowComponent } from './idea-show/idea-show.component';
+import { DesafioShowComponent } from './desafio-show/desafio-show.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DesafioEditComponent } from './desafio-edit/desafio-edit.component';
     IdeaEditComponent,
     NavbarComponent,
     DesafioListComponent,
-    DesafioEditComponent
+    DesafioEditComponent,
+    IdeaShowComponent,
+    DesafioShowComponent
   ],
  imports: [
     BrowserModule,

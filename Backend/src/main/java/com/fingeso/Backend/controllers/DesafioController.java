@@ -24,7 +24,7 @@ public class DesafioController {
     @ResponseBody
     public Desafio getDesafioList(@PathVariable String id){
 
-        return this.repository.findDesafioByIdNumber(id);
+        return this.repository.findDesafioById(id);
     }
 
     //ruta: http://localhost:1313/desafios/getdesafios
@@ -48,7 +48,7 @@ public class DesafioController {
       @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
       @ResponseBody
       public void deleteDesafio(@PathVariable String id) {
-      repository.delete(repository.findDesafioByIdNumber(id));
+      repository.delete(repository.findDesafioById(id));
   }
 
     //Ruta:  http://localhost:1313/ideas/create

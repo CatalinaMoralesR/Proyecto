@@ -1,27 +1,15 @@
 <mat-card>
-  <form #ideaForm="ngForm" (ngSubmit)="save(ideaForm.value)">
-    <mat-card-header>
-      <mat-card-title><h2>Publica tu Idea</h2></mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <input type="hidden" name="href" [(ngModel)]="idea.href">
-      <mat-form-field>
-        <input matInput placeholder="Nombre idea" [(ngModel)]="idea.nombre" required name="nombre" #name>
-      </mat-form-field> <br>
-      <mat-form-field>
-        <input matInput placeholder="Descripción idea" [(ngModel)]="idea.descripcion" required name="descripcion" #description>
-      </mat-form-field>
+  <mat-card-title align="center">Ideas</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let idea of ideas">
+        <h3 mat-line>{{idea.nombre}}</h3>
+        <br> <h3 mat-line>{{idea.descripcion}}</h3>
+        <button mat-fab color="primary" [routerLink]="['/idea-show/idea']">Ver idea</button>
 
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit"
-              [disabled]="!ideaForm.form.valid">Save</button>
-      <button mat-raised-button color="secondary" (click)="remove(idea.href)"
-              *ngIf="idea.href" type="button">Delete</button>
-      <a mat-button routerLink="/idea-list">Cancel</a>
-    </mat-card-actions>
-    <mat-card-footer>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
 
-    </mat-card-footer>
-  </form>
+  <button mat-fab color="primary" [routerLink]="['/idea-add']">Añadir</button>
 </mat-card>

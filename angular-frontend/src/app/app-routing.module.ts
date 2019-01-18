@@ -4,6 +4,9 @@ import { IdeaListComponent } from './idea-list/idea-list.component';
 import { IdeaEditComponent } from './idea-edit/idea-edit.component';
 import { DesafioListComponent } from './desafio-list/desafio-list.component';
 import { DesafioEditComponent } from './desafio-edit/desafio-edit.component';
+import {IdeaShowComponent} from "./idea-show/idea-show.component";
+import {DesafioShowComponent} from "./desafio-show/desafio-show.component";
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -30,7 +33,16 @@ const routes: Routes = [
   {
     path: 'desafio-edit/:idNumber',
     component: DesafioEditComponent
+  },
+  {
+    path: 'idea-show/:id',
+    component: IdeaShowComponent
+  },
+  {
+    path: 'desafio-show/:id',
+    component: DesafioShowComponent
   }
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

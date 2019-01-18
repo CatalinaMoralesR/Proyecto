@@ -5,12 +5,12 @@
         <mat-list-item *ngFor="let desafio of desafios">
           <h3 mat-line>{{desafio.nombre}}</h3>
           <br> <h3 mat-line>{{desafio.descripcion}}</h3>
-  
+          <button mat-fab color="primary" [routerLink]="['/desafio-show',desafio.id]">Ver desafío</button>
+
         </mat-list-item>
       </mat-list>
     </mat-card-content>
   
     <button mat-fab color="primary" [routerLink]="['/desafio-add']">Add</button>
   </mat-card>
-  
   

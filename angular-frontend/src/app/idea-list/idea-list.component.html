@@ -5,6 +5,7 @@
       <mat-list-item *ngFor="let idea of ideas">
         <h3 mat-line>{{idea.nombre}}</h3>
         <br> <h3 mat-line>{{idea.descripcion}}</h3>
+        <button mat-fab color="primary" [routerLink]="['/idea-show',idea.id]">Ver idea</button>
 
       </mat-list-item>
     </mat-list>
