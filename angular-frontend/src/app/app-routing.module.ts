@@ -6,10 +6,10 @@ import { DesafioListComponent } from './desafio-list/desafio-list.component';
 import { DesafioEditComponent } from './desafio-edit/desafio-edit.component';
 import {IdeaShowComponent} from "./idea-show/idea-show.component";
 import {DesafioShowComponent} from "./desafio-show/desafio-show.component";
-
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'idea-list',
     component: IdeaListComponent
@@ -41,8 +41,11 @@ const routes: Routes = [
   {
     path: 'desafio-show/:id',
     component: DesafioShowComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

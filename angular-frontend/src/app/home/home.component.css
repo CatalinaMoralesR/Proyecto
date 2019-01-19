@@ -1,0 +1,23 @@
+.intro{
+    width:500px;
+    height:auto;
+    background-color:#fff;
+    opacity:0.9;
+    color:#000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:18px;
+    padding:25px;
+    text-align: center;
+    margin-left: 400px;
+    
+}
+h1{
+    text-align:center;
+    color:black;
+}
+.mat-fab, .mat-flat-button, .mat-mini-fab, .mat-raised-button {
+    color: rgba(0,0,0,.87);
+    background-color: #dc3545;
+    color: white;
+    border-radius: 30px !important;
+}
