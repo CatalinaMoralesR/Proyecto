@@ -1,3 +1,25 @@
-<p>
-  comentario-add works!
-</p>
+<mat-card>
+  <form #comentarioForm="ngForm" (ngSubmit)="save(comentarioForm.value)">
+    <mat-card-header>
+      <mat-card-title><h5>{{comentario.texto ? 'Agregar' : 'Agregar'}} Comentario </h5></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <input type="hidden" name="href" [(ngModel)]="comentario.href">
+      <mat-form-field>
+        <input matInput placeholder="Escribe un comentario..." [(ngModel)]="comentario.texto" required name="texto" #name>
+      </mat-form-field> <br>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="!comentarioForm.form.valid">Agregar</button>
+
+      <button mat-raised-button color="secondary" (click)="remove(comentario.href)"
+              *ngIf="comentario.href" type="button">Delete</button>
+    </mat-card-actions>
+    <mat-card-footer>
+
+    </mat-card-footer>
+  </form>
+</mat-card>

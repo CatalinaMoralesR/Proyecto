@@ -25,7 +25,7 @@ public class Comentario {
         return texto;
     }
 
-    public void setTexto(String description) {
+    public void setTexto(String texto) {
         this.texto = texto;
     }
 

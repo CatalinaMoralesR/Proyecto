@@ -1,9 +1,11 @@
 <div class="contenedor">
   <h3>{{idea.nombre}}</h3>
   <div class="descripcion">{{idea.descripcion}}</div>
+  <app-comentario-add></app-comentario-add>
+
+  <app-comentario-list></app-comentario-list>
+
   <div class="permalink">
     <a style="color:white;" routerLink="/idea-list">Volver</a>
-  </div>
-  <div>     <app-comentario-list></app-comentario-list>
   </div>
 </div>
