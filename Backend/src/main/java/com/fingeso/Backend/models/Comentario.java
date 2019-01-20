@@ -7,17 +7,18 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import java.util.List;
 
 public class Comentario {
-    @Id private String idNumber;
+    @Id private String id;
     public String texto;
+    public String idIdea;
   //  public Date fecha_publicacion;
 
 
-    public String getIdNumber() {
-        return idNumber;
+    public String getId() {
+        return id;
     }
 
-    public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTexto() {
@@ -26,6 +27,13 @@ public class Comentario {
 
     public void setTexto(String description) {
         this.texto = texto;
+    }
+
+    public String getIdIdea(){
+        return idIdea;
+    }
+    public void setIdIdea(String idIdea){
+        this.idIdea = idIdea;
     }
 
  /*   public String getFecha_publicacion() {

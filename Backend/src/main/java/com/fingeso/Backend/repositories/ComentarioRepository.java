@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin(origins = " ",maxAge = 3600)
 public interface ComentarioRepository extends MongoRepository<Comentario, String>{
 
-    Comentario findComentarioByIdNumber(String idNumber);
+    Comentario findComentarioById(String idNumber);
 }

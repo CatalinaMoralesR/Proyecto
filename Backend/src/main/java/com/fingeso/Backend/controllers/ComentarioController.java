@@ -24,7 +24,7 @@ public class ComentarioController {
     @ResponseBody
     public Comentario getComentarioList(@PathVariable String id){
 
-        return this.repository.findComentarioByIdNumber(id);
+        return this.repository.findComentarioById(id);
     }
 
     //ruta: http://localhost:1313/comentarios/getcomentarios
@@ -39,7 +39,7 @@ public class ComentarioController {
       @RequestMapping(value ="/delete/{id}", method = RequestMethod.DELETE)
       @ResponseBody
       public void deleteCometario(@PathVariable String id) {
-      repository.delete(repository.findComentarioByIdNumber(id));
+      repository.delete(repository.findComentarioById(id));
   }
     //Ruta:  http://localhost:1313/comentarios/create
 

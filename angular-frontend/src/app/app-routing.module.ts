@@ -7,6 +7,7 @@ import { DesafioEditComponent } from './desafio-edit/desafio-edit.component';
 import {IdeaShowComponent} from "./idea-show/idea-show.component";
 import {DesafioShowComponent} from "./desafio-show/desafio-show.component";
 import {HomeComponent} from "./home/home.component";
+import {ComentarioListComponent} from "./comentario-list/comentario-list.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -45,7 +46,11 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  }
+  },
+  {
+    path: 'comentario-list',
+    component: ComentarioListComponent
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

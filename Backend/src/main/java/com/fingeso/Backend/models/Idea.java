@@ -5,12 +5,13 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.util.List;
-
+import java.util.ArrayList;
 
 public class Idea {
     @Id private String id;
     public String descripcion;
     public String nombre;
+    public ArrayList<Comentario> comentarios;
 
 
     public String getId() {
@@ -37,5 +38,10 @@ public class Idea {
         this.nombre = nombre;
     }
 
-   
+    public ArrayList<Comentario> getComentarios() {
+        return comentarios;
+    }
+    public void setComentarios(Comentario comentario){
+        this.comentarios.add(comentario);
+    }
 }

@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Desafio {
 
@@ -12,8 +13,8 @@ public class Desafio {
     public String nombre;
     public String descripcion;
     private Date fecha_de_inicio;
-    private Date fecha_de_fin; 
-
+    private Date fecha_de_fin;
+    private ArrayList<Idea> ideas;
 
     public String getId() {
         return id;
@@ -50,5 +51,12 @@ public class Desafio {
     public void setFecha_de_fin(Date fecha_de_fin){
         this.fecha_de_fin = fecha_de_fin;
     }
-   
+
+    public ArrayList<Idea> getIdeas() {
+        return ideas;
+    }
+
+    public void setIdeas(Idea idea){
+        this.ideas.add(idea);
+    }
 }

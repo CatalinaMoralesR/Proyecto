@@ -1,7 +1,11 @@
  package com.fingeso.Backend.controllers;
 
 import com.fingeso.Backend.models.Idea;
+import com.fingeso.Backend.models.Comentario;
+
 import com.fingeso.Backend.repositories.IdeaRepository;
+import com.fingeso.Backend.repositories.ComentarioRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.apache.logging.log4j.util.PropertySource;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 import java.util.List;
+import java.util.ArrayList;
 
 @CrossOrigin(origins = "http://localhost:4200",maxAge = 3600)
 @RestController
@@ -18,7 +23,8 @@ public class IdeaController {
 
     @Autowired
     private IdeaRepository repository;
-
+    @Autowired
+    ComentarioRepository comentarioRepository;
     //ruta: http://localhost:1313/ideas/id
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
@@ -57,6 +63,12 @@ public class IdeaController {
       repository.save(idea);
       return idea;
 }
+
+    @RequestMapping(value = "/{id}/comentarios", method = RequestMethod.GET)
+    public ArrayList<Comentario> createComentarioIdea(@PathVariable("id") String id ) {
+        Idea idea = getIdeaList(id);
+        return idea.getComentarios();
+    }
 }
 
 
