@@ -33,9 +33,11 @@ export class IdeaService {
     return this.http.delete(href);
   }
 
-  getComentarios(id: string) {
-    return this.http.get(this.IDEA_API + '/' + id + '/comentarios/');
+  addComentario(id: string, comentario:any) {
+    console.log(comentario);
+    return this.http.post(this.IDEA_API + '/' + id + '/comentario/', comentario);
   }
+
 
   search(nombre: String){
     return this.http.get(this.IDEA_API + '/ideas/byname/{name}');

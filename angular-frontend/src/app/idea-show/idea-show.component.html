@@ -2,8 +2,15 @@
   <h3>{{idea.nombre}}</h3>
   <div class="descripcion">{{idea.descripcion}}</div>
   <app-comentario-add></app-comentario-add>
+<br> <br> <br>
+ <!-- <app-comentario-list></app-comentario-list>  -->
 
-  <app-comentario-list></app-comentario-list>
+  <mat-list-item *ngFor="let comentario of comentarios">
+
+  </mat-list-item>
+
+  <div class = "comentarios" >{{idea.comentarios[0].texto}}</div>
+
 
   <div class="permalink">
     <a style="color:white;" routerLink="/idea-list">Volver</a>

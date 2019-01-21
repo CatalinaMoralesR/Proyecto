@@ -3,6 +3,8 @@ import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { ComentarioService } from '../shared/comentario/comentario.service';
+import { IdeaService } from '../shared/idea/idea.service';
+
 @Component({
   selector: 'app-comentario-add',
   templateUrl: './comentario-add.component.html',
@@ -10,30 +12,19 @@ import { ComentarioService } from '../shared/comentario/comentario.service';
 })
 export class ComentarioAddComponent implements OnInit {
   comentario: any = {};
-
+  id: string;
   sub: Subscription;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
               private comentarioService: ComentarioService,
+              private ideaService: IdeaService,
   ) {
   }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      const id = params['id'];
-      if (id) {
-        this.comentarioService.get(id).subscribe((comentario: any) => {
-          if (comentario) {
-            this.comentario = comentario;
-            this.comentario.href = comentario._links.self.href;
-
-          } else {
-            console.log(`Comentario with id '${id}' not found, returning to list`);
-            this.gotoList();
-          }
-        });
-      }
+       this.id = params['id'];
     });
   }
 
@@ -46,17 +37,14 @@ export class ComentarioAddComponent implements OnInit {
   }
 
   save(form: NgForm) {
-    this.comentarioService.save(form).subscribe(result => {
+    this.ideaService.addComentario(this.id, form).subscribe(result => {
+      console.log(this.id);
       console.log(form);
       this.gotoList();
     }, error => console.error(error));
   }
 
-  remove(href) {
-    this.comentarioService.remove(href).subscribe(result => {
-      this.gotoList();
-    }, error => console.error(error));
-  }
+
 
 
 

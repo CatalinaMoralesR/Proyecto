@@ -4,12 +4,12 @@ import { IdeaListComponent } from './idea-list/idea-list.component';
 import { IdeaEditComponent } from './idea-edit/idea-edit.component';
 import { DesafioListComponent } from './desafio-list/desafio-list.component';
 import { DesafioEditComponent } from './desafio-edit/desafio-edit.component';
-import {IdeaShowComponent} from "./idea-show/idea-show.component";
-import {DesafioShowComponent} from "./desafio-show/desafio-show.component";
-import {HomeComponent} from "./home/home.component";
-import {ComentarioListComponent} from "./comentario-list/comentario-list.component";
-import {ComentarioAddComponent} from "./comentario-add/comentario-add.component";
-import {UsuarioShowComponent} from "./usuario-show/usuario-show.component";
+import {IdeaShowComponent} from './idea-show/idea-show.component';
+import {DesafioShowComponent} from './desafio-show/desafio-show.component';
+import {HomeComponent} from './home/home.component';
+import {ComentarioListComponent} from './comentario-list/comentario-list.component';
+import {ComentarioAddComponent} from './comentario-add/comentario-add.component';
+import {UsuarioShowComponent} from './usuario-show/usuario-show.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
