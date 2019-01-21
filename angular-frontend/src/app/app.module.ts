@@ -19,6 +19,7 @@ import { DesafioShowComponent } from './desafio-show/desafio-show.component';
 import { HomeComponent } from './home/home.component';
 import { ComentarioListComponent } from './comentario-list/comentario-list.component';
 import { ComentarioAddComponent } from './comentario-add/comentario-add.component';
+import { UsuarioShowComponent } from './usuario-show/usuario-show.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ComentarioAddComponent } from './comentario-add/comentario-add.componen
     DesafioShowComponent,
     HomeComponent,
     ComentarioListComponent,
-    ComentarioAddComponent
+    ComentarioAddComponent,
+    UsuarioShowComponent
   ],
  imports: [
     BrowserModule,

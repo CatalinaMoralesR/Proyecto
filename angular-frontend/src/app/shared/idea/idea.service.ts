@@ -36,4 +36,8 @@ export class IdeaService {
   getComentarios(id: string) {
     return this.http.get(this.IDEA_API + '/' + id + '/comentarios/');
   }
+
+  search(nombre: String){
+    return this.http.get(this.IDEA_API + '/ideas/byname/{name}');
+  }
 }

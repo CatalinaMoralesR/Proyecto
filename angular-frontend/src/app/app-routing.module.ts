@@ -9,6 +9,7 @@ import {DesafioShowComponent} from "./desafio-show/desafio-show.component";
 import {HomeComponent} from "./home/home.component";
 import {ComentarioListComponent} from "./comentario-list/comentario-list.component";
 import {ComentarioAddComponent} from "./comentario-add/comentario-add.component";
+import {UsuarioShowComponent} from "./usuario-show/usuario-show.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -56,6 +57,10 @@ const routes: Routes = [
   path: 'comentario-add',
   component: ComentarioAddComponent
 },
+  {
+    path: 'usuario-show',
+    component: UsuarioShowComponent
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

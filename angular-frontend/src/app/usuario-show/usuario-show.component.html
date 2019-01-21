@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Perfil</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let usuario of usuarios">
+        <h3 mat-line>Nombre {{usuario.nombre}} {{usuario.apellido}}</h3>
+        <h3 mat-line>Edad {{usuario.edad}}</h3>
+        <h3 mat-line>Ciudad {{usuario.ciudad}}</h3>
+        <h3 mat-line>Fecha de Nacimiento {{usuario.fecha_de_nacimiento}}</h3>
+        <h3 mat-line>Cargo {{usuario.cargo}}</h3>
+
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
