@@ -11,9 +11,13 @@ public class Idea {
     @Id private String id;
     public String descripcion;
     public String nombre;
-    public ArrayList<Comentario> comentarios;
+    public ArrayList<Comentario> comentarios = new  ArrayList < Comentario > ();
     public int votos;
 
+
+    public Idea(){
+
+    }
 
     public String getId() {
         return id;
@@ -42,7 +46,10 @@ public class Idea {
     public ArrayList<Comentario> getComentarios() {
         return comentarios;
     }
-    public void setComentarios(Comentario comentario){
+    public void setComentarios(ArrayList<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
+    public void addComentarios(Comentario comentario){
         this.comentarios.add(comentario);
     }
 

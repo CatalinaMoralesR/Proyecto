@@ -41,9 +41,19 @@ export class IdeaService {
     return this.http.post(this.IDEA_API  + '/' + id + '/voto/', voto);
   }
 
+  editar(id: string, data: any){
+    let result: Observable<Object>;
+    result = this.http.post(this.IDEA_API + '/edit/' + id, data);
+    return result;
+  }
+
+
+
+
 
   getIdeaByNombre(nombre: string) {
-    return this.http.get(this.IDEA_API +'/byname/' + nombre);
+    console.log(nombre);
+    return this.http.get(this.IDEA_API + '/byname/' + nombre);
   }
 
 

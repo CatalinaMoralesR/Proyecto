@@ -10,6 +10,7 @@ import {HomeComponent} from './home/home.component';
 import {ComentarioListComponent} from './comentario-list/comentario-list.component';
 import {ComentarioAddComponent} from './comentario-add/comentario-add.component';
 import {UsuarioShowComponent} from './usuario-show/usuario-show.component';
+import {IdeaEditrealComponent} from './idea-editreal/idea-editreal.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path: 'usuario-show',
     component: UsuarioShowComponent
+  },
+  {
+    path: 'idea-editreal',
+    component: IdeaEditrealComponent
   },
 
 

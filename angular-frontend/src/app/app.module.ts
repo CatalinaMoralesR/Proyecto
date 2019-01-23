@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { ComentarioListComponent } from './comentario-list/comentario-list.component';
 import { ComentarioAddComponent } from './comentario-add/comentario-add.component';
 import { UsuarioShowComponent } from './usuario-show/usuario-show.component';
+import { IdeaEditrealComponent } from './idea-editreal/idea-editreal.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UsuarioShowComponent } from './usuario-show/usuario-show.component';
     HomeComponent,
     ComentarioListComponent,
     ComentarioAddComponent,
-    UsuarioShowComponent
+    UsuarioShowComponent,
+    IdeaEditrealComponent
   ],
  imports: [
     BrowserModule,
