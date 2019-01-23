@@ -15,10 +15,10 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit"
-              [disabled]="!desafioForm.form.valid">Save</button>
+              [disabled]="!desafioForm.form.valid">Guardar</button>
       <button mat-raised-button color="secondary" (click)="remove(desafio.href)"
-              *ngIf="desafio.href" type="button">Delete</button>
-      <a mat-button routerLink="/desafio-list">Cancel</a>
+              *ngIf="desafio.href" type="button">Borrar</button>
+      <a mat-button routerLink="/desafio-list">Cancelar</a>
     </mat-card-actions>
     <mat-card-footer>
 

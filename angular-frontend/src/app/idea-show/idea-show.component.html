@@ -1,26 +1,37 @@
+<div class="permalink">
+  <a style="color:white;" routerLink="/idea-list">Volver</a>
+</div>
+
+
+
 <div class="contenedor">
   <form #ideaForm="ngForm">
 
-  <h3>{{idea.nombre}} 
-  </h3>
-  <div class="descripcion">{{idea.descripcion}}</div>
+  <h1>{{idea.nombre}}
+  </h1> <br>
+    <h6> Votos: {{idea.votos}} </h6> <br> <br>      <button type="button" class="btn btn-danger" (click)="addVoto(ideaForm.href)">Votar</button>
+
     <br> <br> <br>
-    <!-- <app-comentario-list></app-comentario-list>  -->
+    <br> <br> <h5> <div class="descripcion">{{idea.descripcion}}</div>  </h5>
+    <br> <br> <br>
+    <br> <br> <br>
 
-
-    <button type="button" class="btn btn-danger" (click)="addVoto(ideaForm.href)">Votar</button>
   </form>
 
 
+  <mat-list-item   *ngFor= "let comentario of idea.comentarios">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>  {{comentario.texto}} </div>
+  </mat-list-item>
   <!--<div class="permalink">
     <a style="color:white;" [routerLink]="['/idea-editreal',idea.id]">Ver idea</a>
   </div> -->
 
-  <div class="permalink">
-    <a style="color:white;" routerLink="/idea-list">Volver</a>
-  </div>
-  <div class="voto">
-    Votos: {{idea.votos}}
-  </div>
+
+
 </div>
 <app-comentario-add></app-comentario-add>
