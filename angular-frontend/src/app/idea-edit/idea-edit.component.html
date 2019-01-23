@@ -9,7 +9,7 @@
         <input matInput placeholder="Nombre Idea" [(ngModel)]="idea.nombre" required name="nombre" #name>
       </mat-form-field> <br>
       <mat-form-field>
-        <input matInput placeholder="Descripción Idea" [(ngModel)]="idea.descripcion" required name="descripcion" #description>
+        <input matInput placeholder="Descripción Idea (Máximo 280 caracteres)" [(ngModel)]="idea.descripcion" required name="descripcion" #description maxlength="280">
       </mat-form-field>
 
     </mat-card-content>
