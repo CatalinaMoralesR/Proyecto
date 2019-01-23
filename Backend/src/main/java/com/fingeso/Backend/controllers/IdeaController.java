@@ -68,13 +68,19 @@ public class IdeaController {
     public void createComentarioIdea(@PathVariable("id") String id, @Valid @RequestBody Comentario comentario  ) {
         comentario.setIdIdea(id);
         Idea idea = repository.findIdeaById(id);
-        System.out.println(comentario.getTexto());
-        System.out.println(comentario.getIdIdea());
-        System.out.println("ID idea " + idea.getId());
         idea.setId(id);
         idea.setComentarios(comentario);
         repository.save(idea);
         comentarioRepository.save(comentario);
+    }
+
+
+
+    @RequestMapping(value = "/{id}/voto", method = RequestMethod.POST)
+    public void addVotoIdea(@PathVariable("id") String id) {
+        Idea idea = repository.findIdeaById(id);
+        idea.setVotos();
+        repository.save(idea);
     }
 }
 

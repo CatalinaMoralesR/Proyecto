@@ -33,6 +33,7 @@ export class ComentarioAddComponent implements OnInit {
   }
 
   gotoList() {
+    window.location.reload();
     this.router.navigate(['/idea-show']);
   }
 

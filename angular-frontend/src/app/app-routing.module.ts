@@ -61,6 +61,8 @@ const routes: Routes = [
     path: 'usuario-show',
     component: UsuarioShowComponent
   },
+
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

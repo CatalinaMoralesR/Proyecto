@@ -12,6 +12,7 @@ public class Idea {
     public String descripcion;
     public String nombre;
     public ArrayList<Comentario> comentarios;
+    public int votos;
 
 
     public String getId() {
@@ -43,5 +44,13 @@ public class Idea {
     }
     public void setComentarios(Comentario comentario){
         this.comentarios.add(comentario);
+    }
+
+    public int getVotos() {
+        return votos;
+    }
+
+    public void setVotos() {
+        this.votos = this.votos + 1;
     }
 }

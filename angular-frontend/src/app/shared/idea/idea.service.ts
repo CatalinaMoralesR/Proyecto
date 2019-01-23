@@ -37,7 +37,9 @@ export class IdeaService {
     console.log(comentario);
     return this.http.post(this.IDEA_API + '/' + id + '/comentario/', comentario);
   }
-
+  addVotoIdea(id: string) {
+    return this.http.post(this.IDEA_API + '/'+ id + '/voto');
+  }
 
   search(nombre: String){
     return this.http.get(this.IDEA_API + '/ideas/byname/{name}');
