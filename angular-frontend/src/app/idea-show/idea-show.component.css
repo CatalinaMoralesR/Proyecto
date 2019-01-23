@@ -27,7 +27,7 @@
     float: right;
     border-radius: 20px;
 }
-.descripcion[_ngcontent-c4] {
+.descripcion {
     width: 450px;
     border-color: #fafafa !important;
     background-color: #fff;
@@ -57,4 +57,17 @@ h5{
 .mat-form-field-wrapper {
     position: relative;
     width: 450px;
+}
+.comentario[_ngcontent-c3] {
+    width: 350px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    padding: 15px;
+    line-height: 3px;
+    margin-top: 15px !important;
+    width: 450px;
+    border:1px solid;
+    border-radius:15px;
+    border-color:#d8d8d8;
 }
