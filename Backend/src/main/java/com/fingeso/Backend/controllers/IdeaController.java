@@ -74,7 +74,11 @@ public class IdeaController {
         comentarioRepository.save(comentario);
     }
 
-
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+    public void editIdea(@PathVariable("id") String id, @Valid @RequestBody Idea idea ) {
+        idea.setId(id);
+        repository.save(idea);
+    }
 
     @RequestMapping(value = "/{id}/voto/", method = RequestMethod.POST)
     public void addVotoIdea(@PathVariable("id") String id) {
