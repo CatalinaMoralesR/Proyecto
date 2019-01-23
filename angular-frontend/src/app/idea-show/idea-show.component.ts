@@ -37,7 +37,7 @@ export class IdeaShowComponent implements OnInit {
   }
 
   addVoto(form: NgForm) {
-    this.ideaService.addVotoIdea(this.id).subscribe(result => {
+    this.ideaService.addVotoIdea(this.id, this.idIdea).subscribe(result => {
       console.log(this.id);
       this.gotoList();
     }, error => console.error(error));

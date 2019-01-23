@@ -37,11 +37,14 @@ export class IdeaService {
     console.log(comentario);
     return this.http.post(this.IDEA_API + '/' + id + '/comentario/', comentario);
   }
-  addVotoIdea(id: string) {
-    return this.http.post(this.IDEA_API + '/'+ id + '/voto');
+  addVotoIdea(id: string, voto: String) {
+    return this.http.post(this.IDEA_API  + '/' + id + '/voto/', voto);
   }
 
-  search(nombre: String){
-    return this.http.get(this.IDEA_API + '/ideas/byname/{name}');
+
+  getIdeaByNombre(nombre: string) {
+    return this.http.get(this.IDEA_API +'/byname/' + nombre);
   }
+
+
 }
