@@ -43,7 +43,8 @@ export class IdeaService {
 
 
   getIdeaByNombre(nombre: string) {
-    return this.http.get(this.IDEA_API +'/byname/' + nombre);
+    console.log(nombre);
+    return this.http.get(this.IDEA_API + '/byname/' + nombre);
   }
 
 

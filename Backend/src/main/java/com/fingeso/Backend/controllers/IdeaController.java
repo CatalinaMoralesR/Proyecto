@@ -69,7 +69,7 @@ public class IdeaController {
         comentario.setIdIdea(id);
         Idea idea = repository.findIdeaById(id);
         idea.setId(id);
-        idea.setComentarios(comentario);
+        idea.addComentarios(comentario);
         repository.save(idea);
         comentarioRepository.save(comentario);
     }

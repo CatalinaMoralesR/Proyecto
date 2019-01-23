@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Subscription} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {IdeaService} from '../shared/idea/idea.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -17,17 +17,26 @@ export class NavbarComponent implements OnInit {
 
   constructor(private ideaService: IdeaService,
               private route: ActivatedRoute,
+              private router: Router,
+
   ){}
 
 
   ngOnInit() {
     this.subs = this.route.params.subscribe(params => {this.nombre=params['nombre'];});
   }
-
-
-  buscarIdea(form: NgForm){
-    console.log(this.nombre);
-
-    this.ideaService.getIdeaByNombre(this.nombre).subscribe(data=>{this.idea = data;});
+  gotoList() {
+    window.location.reload();
+    this.router.navigate(['/idea-show']);
   }
+
+
+
+  buscarIdea(form: NgForm) {
+    this.ideaService.getIdeaByNombre(this.nombre).subscribe(result => {
+      console.log(this.id);
+      this.gotoList();
+    }, error => console.error(error));
+  }
+
 }
