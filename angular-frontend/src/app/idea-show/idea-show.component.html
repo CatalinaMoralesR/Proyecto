@@ -1,30 +1,22 @@
 <div class="contenedor">
   <form #ideaForm="ngForm">
 
-  <h3>{{idea.nombre}}    <h5> Votos {{idea.votos}} </h5>
+  <h3>{{idea.nombre}} 
   </h3>
   <div class="descripcion">{{idea.descripcion}}</div>
-
-    <app-comentario-add></app-comentario-add>
     <br> <br> <br>
     <!-- <app-comentario-list></app-comentario-list>  -->
 
-    <mat-list-item *ngFor="let comentario of idea.comentarios">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div >{{comentario.texto}}</div>
 
-    </mat-list-item>
-
-    <button mat-raised-button color="primary" (click)="addVoto(ideaForm.href)" type="button">Votar</button>
+    <button type="button" class="btn btn-danger" (click)="addVoto(ideaForm.href)">Votar</button>
   </form>
 
 
   <div class="permalink">
     <a style="color:white;" routerLink="/idea-list">Volver</a>
   </div>
+  <div class="voto">
+    Votos: {{idea.votos}}
+  </div>
 </div>
+<app-comentario-add></app-comentario-add>
